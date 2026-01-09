@@ -1,0 +1,2 @@
+# mp4_to_avchd
+mp4が入ったフォルダをAVCHD形式に変換します
