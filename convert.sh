@@ -1,5 +1,5 @@
 #!/bin/bash
-for mp4 in 00.orig/*/*.mp4
+for mp4 in 00.orig/*.mp4
 do
   ffmpeg -y -i "${mp4}" -vf scale=720:480,fps=30000/1001 -c:v rawvideo -pix_fmt yuv420p -c:a pcm_s16le -ar 48000 -af "loudnorm,aresample=async=1,aformat=channel_layouts=stereo"  "${mp4%.*}.avi"
 done

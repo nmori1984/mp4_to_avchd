@@ -54,7 +54,7 @@ echo "========================================="
 echo "Step 1.5: Re-encoding for AVCHD compliance"
 echo "========================================="
 ffmpeg -y -i output.mp4 \
--c:v libx264 -profile:v high -level 4.1 -pix_fmt yuv420p \
+-c:v libx264 -profile:v high -level 3.0 -s 720x480 -r 29.97 -pix_fmt yuv420p \
 -x264-params "nal-hrd=avchd:aud=1:bluray-compat=1" \
 -b:v 6000k -maxrate 9000k -bufsize 9000k \
 -c:a ac3 -b:a 128k \
